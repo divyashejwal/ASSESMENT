@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+//Basic class vehicle
+class Vehicle {
+  public:
+  void vehicle(){
+    cout<<"I am a vehicle:"<<endl;
+  }
+};
+//Derived class FourWheeler (inherits from vehicle)
+class FourWheeler:public vehicle {
+  public:
+  void Fourwheeler(){
+    cout<<"I am a fourwheels"<<endl;
+  }
+};
+
+//Derived class car(inherits from fourwheels)
+class car:public fourwheelers
+  public:
+  Void car(){
+    cout<<"I am a car"<<endl;
+  }
+
+int main(){
+  //Create an object of class car
+  car myCar;
+  
+  //Call methods car,fourwheeler,and vehicle through car object
+  myCar.car();
+  myCar.fourwheeler();
+  myCar.vehicle();
+  
+  return 0;
+}
